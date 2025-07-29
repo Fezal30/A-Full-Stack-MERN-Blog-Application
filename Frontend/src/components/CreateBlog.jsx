@@ -15,7 +15,7 @@ const CreateBlog = () => {
     const content = contentRef.current.value;
     const author = authorRef.current.value;
 
-    fetch("http://localhost:3000/api/blogs", {
+    fetch("http://fezal30-backend.azurewebsites.net/api/blogs", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

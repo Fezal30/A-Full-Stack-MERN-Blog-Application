@@ -10,16 +10,19 @@ const CommentForm = ({ blogId }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     sendingComment(true);
-    fetch(`http://localhost:3000/api/blogs/${blogId}/comment`, {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        username: usernameRef.current.value,
-        content: commentRef.current.value,
-      }),
-    })
+    fetch(
+      `http://fezal30-backend.azurewebsites.net/api/blogs/${blogId}/comment`,
+      {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          username: usernameRef.current.value,
+          content: commentRef.current.value,
+        }),
+      }
+    )
       .then((res) => res.json())
       .then((resJson) => {
         updateBlog(resJson.blog);

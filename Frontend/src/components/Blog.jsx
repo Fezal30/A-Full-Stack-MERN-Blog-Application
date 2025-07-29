@@ -20,7 +20,7 @@ const Blog = ({ blog }) => {
   };
 
   const handleDelete = () => {
-    fetch(`http://localhost:3000/api/blogs/${blog._id}`, {
+    fetch(`http://fezal30-backend.azurewebsites.net/api/blogs/${blog._id}`, {
       method: "DELETE",
     }).then(() => {
       deleteBlog(blog._id);
