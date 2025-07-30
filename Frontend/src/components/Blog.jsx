@@ -7,7 +7,7 @@ const Blog = ({ blog }) => {
   const { updateBlog, deleteBlog } = useContext(BlogContext);
 
   const handleLike = () => {
-    fetch(`http://localhost:3000/api/blogs/${blog._id}/like`, {
+    fetch(`https://fezal30-backend.azurewebsites.net/api/blogs/${blog._id}/like`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -20,7 +20,7 @@ const Blog = ({ blog }) => {
   };
 
   const handleDelete = () => {
-    fetch(`http://fezal30-backend.azurewebsites.net/api/blogs/${blog._id}`, {
+    fetch(`https://fezal30-backend.azurewebsites.net/api/blogs/${blog._id}`, {
       method: "DELETE",
     }).then(() => {
       deleteBlog(blog._id);

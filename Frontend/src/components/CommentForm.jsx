@@ -11,7 +11,7 @@ const CommentForm = ({ blogId }) => {
     e.preventDefault();
     sendingComment(true);
     fetch(
-      `http://fezal30-backend.azurewebsites.net/api/blogs/${blogId}/comment`,
+      `https://fezal30-backend.azurewebsites.net/api/blogs/${blogId}/comment`,
       {
         method: "PUT",
         headers: {

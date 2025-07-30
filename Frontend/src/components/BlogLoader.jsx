@@ -8,7 +8,7 @@ const BlogLoader = ({ children }) => {
 
   useEffect(() => {
     setLoading(true);
-    fetch("http://fezal30-backend.azurewebsites.net/api/blogs")
+    fetch("https://fezal30-backend.azurewebsites.net/api/blogs")
       .then((res) => res.json())
       .then((resJson) => {
         setBlogs(resJson.blogs);
